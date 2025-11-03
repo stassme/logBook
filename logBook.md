@@ -4,3 +4,4 @@
 | :---         |     :---:      |     :---:      |     :---:      |
 | 02.11.2025 | 4 | Cisco task | Have done a couple of exams |
 | 03.11.2025 | 2 | Cisco task | Finished all of exams |
+| 03.11.2025 | 1 | PortSwigger | Explored the PortSwigger environment |
