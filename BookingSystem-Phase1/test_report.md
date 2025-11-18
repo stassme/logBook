@@ -29,15 +29,20 @@
 # 2️ Executive Summary
 
 **Short summary:**  
-The registration functionality contains multiple high-impact vulnerabilities, including stored XSS, SQL injection through password fields, missing server-side validation, no CSRF protection, no HTTPS, and broken login functionality.
+The registration functionality contains multiple high-impact vulnerabilities, including stored XSS, SQL injection through password fields, missing server-side validation, no CSRF protection, no HTTPS, and broken login functionality. Manual testing revealed several critical vulnerabilities that automated tools such as OWASP ZAP did not detect.
 
 **Overall risk level:** Critical
+
+**Important clarification:**  
+OWASP ZAP reported **0 High alerts**, but this does NOT reflect the actual security posture.  
+ZAP focuses on server headers and standard patterns, while this application’s worst issues are **logic-based injections** in fields processed by backend logic.  
+These were only detectable through manual testing.
 
 **Top 5 immediate actions:**  
 1. Implement server-side validation for all input fields.  
 2. Sanitize and encode user input to prevent XSS.  
 3. Implement CSRF protection on all POST endpoints.  
-4. Enforce password policy and restrict invalid data (e.g., negative age).  
+4. Enforce password policy and restrict invalid/negative birthdates.  
 5. Fix the login system and introduce proper session handling with secure cookies.  
 
 ---
@@ -55,6 +60,8 @@ The registration functionality contains multiple high-impact vulnerabilities, in
 
 # 4️ Findings
 
+> Note: Although OWASP ZAP reported **no High-severity alerts**, manual testing clearly exposed Critical issues such as stored XSS and SQL injection. Automated scanners often miss these vulnerabilities, especially in small applications using custom backend logic.
+
 | ID | Severity | Finding | Description | Evidence / Proof |
 |----|----------|----------|--------------|------------------|
 | F-01 | 🔴 High | Stored XSS in password field | Registration accepts JavaScript payloads and stores them in DB without sanitization. | Payloads `<script>alert(1)</script>`, `"><script>alert(1)</script>`, `<IMG SRC=x onerror=alert(1)>` all register successfully. |
@@ -69,17 +76,12 @@ The registration functionality contains multiple high-impact vulnerabilities, in
 # 5️ OWASP ZAP Test Report (Attachment)
 
 **Purpose:**  
-The OWASP ZAP scan should be attached as a separate Markdown file (`zap_report.md`).  
-It supplements manual testing with automated vulnerability detection.
+The OWASP ZAP scan supplements manual testing with automated vulnerability detection.
 
-**Instructions:**  
-1. Run the ZAP scan against your local environment.  
-2. Export as Markdown.  
-3. Save as `BookingSystem-Phase1/zap_report.md`.  
-4. Add file to your Git repository.
-
-**Attach/link the ZAP report here:**  
-- `zap_report.md`
+**Important note:**  
+ZAP reported Medium and Low issues only (CSP missing, anti-CSRF missing, missing headers).  
+ZAP did **not** detect manually discovered SQL Injection and XSS vulnerabilities.  
+This is common with simple custom backends where the scanner cannot interpret application logic.
 
 ---
 
