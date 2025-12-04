@@ -10,3 +10,4 @@
 | 16.11.2025 | 3 | The Booking system project → Phase 1 → Part 1 | Watch the tutorial video + Complete the assignment |
 | 24.11.2025 | 0.75 | The Booking system project → Phase 1 → Part 1 | Fix ZAP report |
 | 25.11.2025 | 3 | The Booking system project → Phase 1 → Part 2 | report to development team |
+| 04.12.2025 | 3.5 | The Booking system project → Phase 2 | assignment(cracking passwords) |
