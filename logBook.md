@@ -11,3 +11,5 @@
 | 24.11.2025 | 0.75 | The Booking system project → Phase 1 → Part 1 | Fix ZAP report |
 | 25.11.2025 | 3 | The Booking system project → Phase 1 → Part 2 | report to development team |
 | 04.12.2025 | 3.5 | The Booking system project → Phase 2 | assignment(cracking passwords) |
+| 10.12.2025 | 2 | The Booking system project → Phase 3 | assignment(collect all the data) |
+| 15.12.2025 | 1.5 | The Booking system project → Phase 3 | assignment(finish checking the app, submit the task) |
