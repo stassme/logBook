@@ -14,4 +14,5 @@
 | 10.12.2025 | 2 | The Booking system project → Phase 3 | assignment(collect all the data) |
 | 15.12.2025 | 1.5 | The Booking system project → Phase 3 | assignment(finish checking the app, submit the task) |
 | 15.12.2025 | 1 | The Booking system project → Phase 4 | assignment |
+| 17.12.2025 | 2 | The Booking system project → Phase 4 | watch video + submit the task |
 
