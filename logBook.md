@@ -17,4 +17,5 @@
 | 17.12.2025 | 4 | The Booking system project → Phase 4 | watch video + submit the task |
 | 17.12.2025 | 2.5 | portswigger labs | portswigger labs   |
 | 17.12.2025 | 2 | Final assignment | do the task   |
+| 18.12.2025 | 0.5 | Final assignment | Check and submit  |
 
